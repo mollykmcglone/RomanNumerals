@@ -3,6 +3,12 @@ $(document).ready(function() {
     event.preventDefault();
     var $entry = $( "input" ).val().toLowerCase();
     console.log($entry);
+    var Answer = "";
+
+    function print(Answer) {
+      var Resultdiv = document.getElementById("result");
+      Resultdiv.innerHTML = "<h2>Your Result is:</h2>" +Answer;
+    }
 
     var PigLatin = function(word) {
       var translatedWord = word;
@@ -22,8 +28,8 @@ $(document).ready(function() {
       return translatedWord + "ay";
     };
 
-    console.log(PigLatin($entry));
-
+    var Answer = (PigLatin($entry));
+    print(Answer);
 
     });
   });
