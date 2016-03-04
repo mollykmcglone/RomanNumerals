@@ -2,7 +2,6 @@ $(document).ready(function() {
   $("#translate form").submit(function(event) {
     event.preventDefault();
     var $entry = $( "input" ).val().toLowerCase();
-    console.log($entry);
     var Answer = "";
 
     function print(Answer) {
